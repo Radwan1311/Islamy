@@ -34,55 +34,11 @@ app.get('/prayer' , function(req ,res){
 });
 
 app.get('/quran' , function(req ,res){
-  // const url2='https://api.alquran.cloud/v1/quran/ar.alafasy -' ;
-  // https.get(url2 , function(response2){
-  //
-  //   var data2 = "";
-  //   response2.on('data', function(chunk) {
-  //     data2 += chunk.toString();
-  //   })
-  //   .on('end', function(){
-  //     const quran = JSON.parse(data2);
-  //     const surahName = quran.data.surahs.englishName;
-  //     const surahNumber = quran.data.surahs.number;
-  //     const ayahNumber = quran.data.surahs[1].ayahs[0].numberInSurah;
-  //     const ayahText = quran.data.surahs[1].ayahs[0].text;
-  //
-  //
-  //     const surahNames = [];
-  //     const surahText = [];
-  //     const surahArrays = [];
-  //     const surahObj = [];
-  //     const surahAyahs = [];
-  //
-  //
-  //     for(var i = 0 ; i<= 113 ; i++){
-  //       surahArrays.push(quran.data.surahs[i]);
-  //     }
-  //
-  //     for(var i = 0 ; i<= 113 ; i++){
-  //       surahNames.push(surahArrays[i].englishName);
-  //       surahAyahs.push(surahArrays[i].ayahs);
-  //       surahText.push(surahAyahs.text);
-  //       console.log(surahText);
-  //     }
-  //
-  //
-  //     // for (var i = 0 ; i <= surahArrays.length ; i++){
-  //     //   surahAyahs.push(surahArrays[i].ayahs);
-  //     // }
-  //     //
-  //     // console.log(surahArrays);
-  //
-  //
-  //
-  //
-  //
-  //   });
-  //
-  // });
-
   res.render('quran');
+});
+
+app.get('/history' , function(req ,res){
+  res.render('history');
 });
 
 
