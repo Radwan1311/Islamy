@@ -193,7 +193,7 @@ margin-top: 10px;
 }
 
 /* Style the collapsible content. Note: hidden by default */
-.content {
+.history_content {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
