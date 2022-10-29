@@ -41,8 +41,13 @@ app.get('/history' , function(req ,res){
   res.render('history');
 });
 
+app.get('/questions' , function(req ,res){
+  res.render('questions');
+});
 
-
+app.get('/contact' , function(req ,res){
+  res.render('contact');
+});
 
 
 

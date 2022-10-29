@@ -212,7 +212,7 @@ margin-top: 10px;
   width: 40%;
   font-weight: bold;
   font-size: 1.3rem;
-  border-radius: 10px 10px 0 0; ;
+  border-radius: 10px 10px 0 0;
 }
 
 .topic{
@@ -243,4 +243,62 @@ margin-top: 10px;
   width: 100%;
   text-align:right;
 
+}
+
+/* Common Questions */
+.questions_collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  margin-top: 1%;
+  margin-left: 3%;
+  border-radius: 10px 10px 0 0;
+
+}
+
+.questions_active, .questions_collapsible:hover {
+  background-color: #555;
+}
+
+.questions_collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.questions_active:after {
+  content: "\2212";
+}
+
+.questions_content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background: rgb(240,240,240);
+  background: linear-gradient(-90deg, rgba(240,240,240,1) 0%, rgba(156,218,255,1) 100%, rgba(0,212,255,1) 100%);  width: 50%;
+  margin-left: 3%;
+  border-radius:0 0 10px 10px  ;
+
+}
+
+.questions_text{
+  padding-top: 10px;
+}
+
+.question_Section_Titel{
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.marg{
+  margin-top: 1%;
 }
