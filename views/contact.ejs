@@ -37,7 +37,7 @@
               <a class="nav-link nav_items" href="/quran">Quran</a>
             </li>
             <li class="nav-item  ">
-              <a class="nav-link nav_items" href="/<questions></questions>">Common questions</a>
+              <a class="nav-link nav_items" href="/questions">Common questions</a>
             </li>
             <li class="nav-item  ">
               <a class="nav-link nav_items" href="/contact">Contact Us</a>
@@ -51,6 +51,29 @@
       </div>
     </nav>
 
+
+    <div class="col-md-7 col-lg-8 center  conact_marg">
+            <h4 class="mb-3 marg contact_form"> Send Us A Message</h4>
+            <form class=" contact_form" onsubmit="myFunction()"  action="/contact" method="POST"  >
+
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" name="firstName" required>
+
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" name="lastName" required>
+
+                  <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                  <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+
+                <label for="Message" class="form-label">Message <span class="text-muted"></span></label>
+                <textarea class="form-control" name="Message" rows="8" cols="80" required></textarea>
+
+                <button  class="w-30 btn btn-primary btn-lg marg" type="submit" >Submit</button>
+
+            </form>
+    </div>
+
+
     <!-- footer -->
     <footer class="footer">
 
@@ -59,5 +82,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="js/contact.js" charset="utf-8"></script>
   </body>
 </html>

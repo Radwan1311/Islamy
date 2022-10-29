@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const https = require('https');
+var nodemailer = require('nodemailer');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -17,6 +18,18 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'islamy1311@gmail.com',
+    pass: 'tgvaaggcgaspcfjc'
+  }
+});
+
+
+
+
 
 app.listen(port , function(req , res){
   console.log('Server Has Started Successfully.');
@@ -48,6 +61,28 @@ app.get('/questions' , function(req ,res){
 app.get('/contact' , function(req ,res){
   res.render('contact');
 });
+
+app.post('/contact',function(req,res){
+var mail = JSON.stringify(req.body);
+  var mailOptions = {
+    from: 'riotlolacc05@gmail.com',
+    to: 'radwan.1311.mr@gmail.com',
+    subject: 'islamy Email',
+    text: mail
+  };
+
+
+
+  transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+res.redirect('/questions');
+});
+
 
 
 
