@@ -59,7 +59,7 @@ body{
     background: #F6F6F6;
     border-radius: 50%;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 4%;
     background-image: url('/images/welcome.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body{
     background: #F6F6F6;
     border-radius: 20px;
     margin-left: 1%;
-    margin-top: 3%;
+    margin-top: 2%;
   }
   .header_text{
     margin: 10px;
@@ -81,7 +81,7 @@ body{
   background: #F6F6F6;
   border-radius: 20px;
   margin-left: 5%;
-  margin-top: 4%;
+  margin-top: 3%;
 }
 .content_text1{
   margin: 10px;
