@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/c0a916d27e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Montserrat:wght@100;400;900&family=Sacramento&family=Source+Serif+Pro:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -26,30 +27,30 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item ">
-                    <a class="nav-link nav_items" aria-current="page" href="/">Home</a>
+                    <a id="index11"  class="nav-link nav_items" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item  ">
-                    <a class="nav-link nav_items" href="/history">Islam religion</a>
+                    <a id="index12" class="nav-link nav_items" href="/history">Islam religion</a>
                   </li>
                   <li class="nav-item  ">
-                    <a class="nav-link nav_items" href="/prayer">Prayer</a>
+                    <a id="index13" class="nav-link nav_items" href="/prayer">Prayer</a>
                   </li>
                   <li class="nav-item  ">
-                    <a class="nav-link nav_items" href="/quran">Quran</a>
+                    <a id="index14" class="nav-link nav_items" href="/quran">Quran</a>
                   </li>
                   <li class="nav-item  ">
-                    <a class="nav-link nav_items" href="/questions">Common questions</a>
+                    <a id="index15" class="nav-link nav_items" href="/questions">Common questions</a>
                   </li>
                   <li class="nav-item  ">
-                    <a class="nav-link nav_items" href="/contact">Contact Us</a>
+                    <a id="index16" class="nav-link nav_items" href="/contact">Contact Us</a>
                   </li>
                 </ul>
 
 
 
 
-                  <a href="https://islamy1311-herokuapp-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en&_x_tr_pto=wapp">العربيه</a>
-                  <a href="https://islamy1311.herokuapp.com/">English</a>
+                   <button onclick="changeLanguage('ar')" class="btn btn-link"  type="button" name="button" value="arabic">العربيه</button>
+                   <button onclick="changeLanguage('eng')" class="btn btn-link" type="button" name="button" value="english">English</button>
 
 
 
@@ -70,10 +71,10 @@
             <div class="row">
               <div class="col-3 circle">
             </div>
-              <div class="col-7 header_text_area">
+              <div class="col-8 header_text_area">
                 <div class="header_text">
-                  <h3>Welcome To Islamy Website:</h3>
-                  <p>Islamy is a website created to provide both help and knowledge to everyone seeking knowledge about Islam, in this website we provide
+                  <h3 id="index1">Welcome To Islamy Website:</h3>
+                  <p id="index2">Islamy is a website created to provide both help and knowledge to everyone seeking knowledge about Islam, in this website we provide
                     the essential knowledge you need to understand what Islam is and to know its traditions, we are highly recommending you not stop here and seek
                     knowledge in other websites too because Islam can't be represented by one source but we hope that you will find everything you need to know here in
                     Islamy Website.</p>
@@ -92,16 +93,16 @@
                     <i class="fa-solid fa-mosque "></i>
                   </div>
                   <div class="col-8 content_text1">
-                    <h3 >What Is Islam ? </h3>
-                    <p >Islam is one of the world’s major religions. It shares with Judaism and Christianity a belief in a single god. The Arabic name for God is Allah.
+                    <h3 id="index3">What Is Islam ? </h3>
+                    <p id="index4" >Islam is one of the world’s major religions. It shares with Judaism and Christianity a belief in a single god. The Arabic name for God is Allah.
                        The word Islam means “surrender (to God).” The followers of Islam are called Muslims, which in Arabic means “one who surrenders to God.”
                         While Islam is mainly associated with the Middle East, its roughly one billion followers are found throughout the world.
                         Central to the beliefs of Islam is the idea of one, omnipotent God who transcends class, race, and national differences.
-                      .</p>
+                      </p>
 
-                    <p class="bold">Want To Learn More About Islam? </p>
+                    <p  id="index5" class="bold">Want To Learn More About Islam? </p>
 
-                    <a href="/history"><button class="btn btn-outline-primary btn-posi" type="button" name="button">Click Here</button></a>
+                    <a   href="/history"><button class="btn btn-outline-primary btn-posi" type="button" name="button"> <span id="index6">Click Here</span> </button></a>
                   </div>
                 </div>
               </div>
@@ -111,13 +112,13 @@
                     <i class="fa-solid fa-child-reaching"></i>
                   </div>
                   <div class="col-8 content_text1">
-                    <h3 >Why We Do This ? </h3>
-                    <p >In the last decade, many wrong ideas about Islam were told to people through different sources on different occasions, and when we talk to
+                    <h3  id="index7">Why We Do This ? </h3>
+                    <p  id="index8" >In the last decade, many wrong ideas about Islam were told to people through different sources on different occasions, and when we talk to
                       people about it we found that most of them don't even know the basic understanding of Islam they are just following what they have heard
                       Islam is the peace message to the world and we are here to prove that and to let people know what is Islam .</p>
 
-                    <p class="bold">Do want to be part of what we are doing ?</p>
-                    <a href="/contact"><button class="btn btn-outline-primary btn-posi" type="button" name="button">Support Us</button></a>
+                    <p  id="index9" class="bold">Do want to be part of what we are doing ?</p>
+                    <a   href="/contact"><button class="btn btn-outline-primary btn-posi" type="button" name="button"> <span id="index10">Support Us</span> </button></a>
                   </div>
                 </div>
               </div>
@@ -132,7 +133,9 @@
 
           </footer>
 
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="js/index.js" charset="utf-8"></script>
+
   </body>
 </html>

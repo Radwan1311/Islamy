@@ -64,13 +64,14 @@ a:hover{
     height: 130px;
     background: #F6F6F6;
     border-radius: 50%;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 4%;
     background-image: url('/images/welcome.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   .header_text_area{
     background: #F6F6F6;
     border-radius: 20px;
@@ -82,6 +83,9 @@ a:hover{
   }
 
 /* Content */
+.content{
+  margin: auto;
+}
 .content_title{
 
   background: #F6F6F6;
@@ -112,7 +116,7 @@ a:hover{
 /* footer */
 .footer{
   text-align: center;
-  margin: 3% auto 0 auto;
+  margin: 2% auto 0 auto;
 }
 
 
