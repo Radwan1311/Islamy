@@ -27,9 +27,32 @@ function changeLanguage(lang) {
        index8 :'في العقد الماضي ، تم توصيل العديد من الأفكار الخاطئة حول الإسلام للناس من خلال مصادر اعلاميه مختلفة في مناسبات واحداث مختلفة ، وعندما تحدثنا إلى الناس حول هذا الموضوع وجدنا أن معظمهم لا يعرفون حتى المبادئ الاساسيه للإسلام هم فقط يتبعون ما سمعوه و ما تم اخبارهم به .ولكن الإسلام هو رسالة السلام إلى العالم ونحن هنا لإثبات ذلك والسماح للناس بمعرفة ما هو الإسلام .',
        index9 :'هل تريد أن تكون جزءا مما نقوم به؟',
        index10:'ادعمنا',
+     },
+     history_ar:{
+       history1:'',
+       history2:'',
+       history3:'',
+       history4:'',
+       history5:'',
+       history6:'',
+       history7:'',
+       history8:'',
+       history9:'',
+       history10:'',
+       history11:'',
+       history12:'',
+       history13:'',
+       history14:'',
+       history15:'',
+       history16:'',
+       history17:'',
+       history18:'',
+       history19:'',
+       history20:'',
+       history21:'',
+       history22:'',
 
-
-     }
+     },
 
    };
 
@@ -57,12 +80,12 @@ function changeLanguage(lang) {
        $('#index10').html(language.index_ar.index10);
 
 
-       $('#index11').html(language.nav.index11);
-       $('#index12').html(language.nav.index12);
-       $('#index13').html(language.nav.index13);
-       $('#index14').html(language.nav.index14);
-       $('#index15').html(language.nav.index15);
-       $('#index16').html(language.nav.index16);
+       $('.index11').html(language.nav.index11);
+       $('.index12').html(language.nav.index12);
+       $('.index13').html(language.nav.index13);
+       $('.index14').html(language.nav.index14);
+       $('.index15').html(language.nav.index15);
+       $('.index16').html(language.nav.index16);
 
 
      }
