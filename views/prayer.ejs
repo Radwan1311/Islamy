@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Prayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/c0a916d27e.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Montserrat:wght@100;400;900&family=Sacramento&family=Source+Serif+Pro:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  nav_size">
+      <div class="container-fluid nav_inner_container">
+        <a  class="navbar-brand brand_css d-inline-block align-text-top" href="/">
+          <i class="fa-solid fa-kaaba "></i>
+          Islamy
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link nav_items" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link nav_items" href="/history">Islam religion</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link nav_items" href="/prayer">Prayer</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link nav_items" href="/quran">Quran</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link nav_items" href="/questions">Common questions</a>
+            </li>
+            <li class="nav-item  ">
+              <a class="nav-link nav_items" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+<!-- content -->
+    <section class="parying_content">
+      <div class="prayer_content">
+
+          <h2>Prayer in Islam:</h2>
+          <p>Prayer was not made obligatory during the Prophet’s journey and ascension to heaven. The only thing that was made obligatory then was that
+            prayer must be offered five times a day. Otherwise, prayer was made an incumbent duty on Muslims ever since the very early days of Islam.
+            The Prophet’s night journey took place in the tenth year after the start of his message. In those ten years, many surahs of the Qur’an were
+            revealed, and in many of them, we read instructions to the Prophet and Muslims to attend to their prayers and to pay their zakah. Indeed the
+            most essential duties in Islam, and all earlier divine religions is our belief in God’s oneness, prayer, and zakah. If you read Surah 73,
+            Al-Muzammil, which is one of the earliest to be revealed, you find an order to the Prophet and his companions to spend much of the night in
+            prayer and worship. This remained obligatory for a whole year when the obligation was relaxed, and night worship was made voluntary. Earlier
+            prophets were also commanded to offer prayers, as this is clear in the Qur’an.</p>
+
+          <p></p>
+
+          <p class="text bold">How to ablution ( Wudu ) for prayer ? </p>
+          <div class="embed-responsive embed-responsive-16by9 vedio">
+            <iframe class="embed-responsive-item vedio" src="https://www.youtube.com/embed/CO5O3JBjgGI" allowfullscreen></iframe>
+          </div>
+
+          <p class="text bold">Now after wudu you are ready for prayer , But How ? </p>
+          <div class="embed-responsive embed-responsive-16by9 vedio">
+            <iframe class="embed-responsive-item vedio" src="https://www.youtube.com/embed/zalLv2NY98k" allowfullscreen></iframe>
+          </div>
+
+          <div class="text_prayer_intro text">
+            <p class="text bold">Now you Know what to do, let's now know when to do?</p>
+            <p> Prayer is an essentialduty of every Muslim and the second Pillar of Islam. It is performed five times a day. These times are dawn (Fajr), noon (Dhuhr),
+                mid-afternoon (Asr), sunset (Maghreb), and evening (Eshaa). Before prayer, there is ritual cleansing and purification. Muslims can perform prayer just about anywhere, but the most favored place is
+                the mosque. A crier (muezzin) calls the faithful to prayer (adhan). The holy day each week is Friday. The congregation of worshippers at the mosque
+                is led by the religious leader or imam. Prayers, wherever they take place, must be performed in the direction of Mecca. This direction is indicated
+                by the kiblah, a word meaning “direction of prayer.” It is indicated in a mosque by a wall (referred to as the kiblah wall) that is usually marked
+                by a niche called the mihrab.</p>
+
+          </div>
+    </section>
+
+    <form class="city_search_form" action="/prayer" method="post">
+      <input class="inbut_field" type="text" name="countryName" placeholder="Enter Your Country Name" required>
+      <input class="inbut_field" type="text" name="cityName" placeholder="Enter Your City Name" required>
+      <button class="btn btn-lg btn-primary" type="submit" name="button">Search</button>
+    </form>
+    <span><%=pressed %></span>
+    <div class="row prayer_dates_container">
+      <%if(pressed === 1){ %>
+        <div class="col-4 prayer_dates">
+          <h3>Duha</h3>
+          <p><%=doha %> </p>
+        </div>
+        <div class="col-4 prayer_dates">
+          <h3>Dhuhr</h3>
+          <p><%=duher %> </p>
+        </div>
+        <div class="col-4 prayer_dates">
+          <h3>Asr</h3>
+          <p><%=asr %> </p>
+        </div>
+        <div class="col-4 prayer_dates">
+          <h3>Maghreb</h3>
+          <p><%=magreb %></p>
+        </div>
+        <div class="col-4 prayer_dates">
+          <h3>Eshaa</h3>
+          <p><%=eshaa %> </p>
+        </div>
+        <div class="col-4 prayer_dates">
+          <h3>Al-fajr</h3>
+          <p><%=fajr %> </p>
+        </div>
+    <%  }else{ %>
+      <div class="col-4 prayer_dates">
+      <h3>Duha</h3>
+      <p>00:00 AM</p>
+    </div>
+    <div class="col-4 prayer_dates">
+      <h3>Dhuhr</h3>
+      <p>00:00 PM</p>
+    </div>
+    <div class="col-4 prayer_dates">
+      <h3>Asr</h3>
+      <p>00:00 PM</p>
+    </div>
+    <div class="col-4 prayer_dates">
+      <h3>Maghreb</h3>
+      <p>00:00 PM</p>
+    </div>
+    <div class="col-4 prayer_dates">
+      <h3>Eshaa</h3>
+      <p>00:00 PM</p>
+    </div>
+    <div class="col-4 prayer_dates">
+      <h3>Al-fajr</h3>
+      <p>00:00 AM</p>
+    </div>
+
+    <% } %>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+
+      <p>©2022 Copyright Radwan's Designs Co.</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+</html>
