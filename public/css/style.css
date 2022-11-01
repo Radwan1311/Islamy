@@ -319,3 +319,16 @@ margin-top: 10px;
   margin-right: auto;
   text-align: center;
 }
+
+.lang{
+  margin-right:  20px;
+  font-size: 1rem;
+}
+
+.lang button {
+  text-decoration: none;
+
+}
+.lang button:hover{
+  color: red;
+}

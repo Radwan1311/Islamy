@@ -4,7 +4,11 @@ const ejs = require('ejs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 const https = require('https');
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
+const translate = require('translate');
+
+var pressed = 0 ;
+var arabic = 0 ;
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -12,12 +16,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-var pressed = 0 ;
+
+async function translateString (str , translateTo){
+  translate.engine = 'libre' ;
+  const foo = await translate(str , translateTo);
+  console.log(foo);
+}
 
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
+
+
+
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -37,8 +49,20 @@ app.listen(port , function(req , res){
 
 
 app.get('/' , function(req ,res){
-  res.render('index');
+
+  res.render('index',{
+    arabic : arabic
+  });
 });
+
+app.post('/' , function(req , res){
+  if(req.body.button === 'arabic'){
+    arabic = 1 ;
+    res.redirect('/')
+  }
+
+});
+
 
 app.get('/prayer' , function(req ,res){
   res.render('prayer' ,{
@@ -46,23 +70,63 @@ app.get('/prayer' , function(req ,res){
   });
 });
 
+
+
 app.get('/quran' , function(req ,res){
-  res.render('quran');
+  res.render('quran',{
+    arabic : arabic
+  });
+});
+
+
+app.post('/quran' , function(req , res){
+  if(req.body.button === 'arabic'){
+    arabic = 1 ;
+    res.redirect('/quran')
+  }
+
 });
 
 app.get('/history' , function(req ,res){
-  res.render('history');
+  res.render('history',{
+    arabic : arabic
+  });
+});
+
+
+app.post('/history' , function(req , res){
+  if(req.body.button === 'arabic'){
+    arabic = 1 ;
+    res.redirect('/history')
+  }
+
 });
 
 app.get('/questions' , function(req ,res){
-  res.render('questions');
+  res.render('questions',{
+    arabic : arabic
+  });
+});
+
+app.post('/questions' , function(req , res){
+  if(req.body.button === 'arabic'){
+    arabic = 1 ;
+    res.redirect('/questions')
+  }
+
 });
 
 app.get('/contact' , function(req ,res){
-  res.render('contact');
+  res.render('contact',{
+    arabic : arabic
+  });
 });
 
 app.post('/contact',function(req,res){
+  if(req.body.button === 'arabic'){
+    arabic = 1 ;
+    res.redirect('/contact')
+  }
 var mail = JSON.stringify(req.body);
   var mailOptions = {
     from: 'riotlolacc05@gmail.com',
