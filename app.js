@@ -23,10 +23,10 @@ async function translateString (str , translateTo){
   console.log(foo);
 }
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
 
 
 
@@ -43,7 +43,7 @@ var transporter = nodemailer.createTransport({
 
 
 
-app.listen(port , function(req , res){
+app.listen(process.env.PORT || 3000, function(req , res){
   console.log('Server Has Started Successfully.');
 });
 
