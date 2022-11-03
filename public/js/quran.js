@@ -1,21 +1,3 @@
-var coll = document.getElementsByClassName("questions_collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("questions_active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-
-
-
-
 
 function changeLanguage(lang) {
 
@@ -35,8 +17,8 @@ function changeLanguage(lang) {
        index16:'تواصل معنا'
 
      },
-     question_ar:{
-       question1:'',
+     quran_ar:{
+       quran1:'',
 
      }
 
@@ -77,7 +59,7 @@ function changeLanguage(lang) {
        $('.index16').attr('href', '/contact#ar');
 
 
-       $('#question1').html(language.question_ar.question1);
+       $('#quran1').html(language.quran_ar.quran1);
 
 
 

@@ -55,19 +55,15 @@ app.get('/' , function(req ,res){
   });
 });
 
-app.post('/' , function(req , res){
-  if(req.body.button === 'arabic'){
-    arabic = 1 ;
-    res.redirect('/')
-  }
-
-});
-
-
 app.get('/prayer' , function(req ,res){
-  res.render('prayer' ,{
-    pressed:pressed
-  });
+
+    res.render('prayer' ,{
+      pressed:pressed ,
+      arabic:arabic
+    });
+
+
+  pressed=0;
 });
 
 
@@ -79,28 +75,15 @@ app.get('/quran' , function(req ,res){
 });
 
 
-app.post('/quran' , function(req , res){
-  if(req.body.button === 'arabic'){
-    arabic = 1 ;
-    res.redirect('/quran')
-  }
-
-});
-
 app.get('/history' , function(req ,res){
-  res.render('history',{
-    arabic : arabic
-  });
-});
+    res.render('history',{
+      arabic : arabic
+    });
 
 
-app.post('/history' , function(req , res){
-  if(req.body.button === 'arabic'){
-    arabic = 1 ;
-    res.redirect('/history')
-  }
 
 });
+
 
 app.get('/questions' , function(req ,res){
   res.render('questions',{
@@ -108,13 +91,6 @@ app.get('/questions' , function(req ,res){
   });
 });
 
-app.post('/questions' , function(req , res){
-  if(req.body.button === 'arabic'){
-    arabic = 1 ;
-    res.redirect('/questions')
-  }
-
-});
 
 app.get('/contact' , function(req ,res){
   res.render('contact',{
@@ -123,28 +99,24 @@ app.get('/contact' , function(req ,res){
 });
 
 app.post('/contact',function(req,res){
-  if(req.body.button === 'arabic'){
-    arabic = 1 ;
-    res.redirect('/contact')
-  }
-var mail = JSON.stringify(req.body);
-  var mailOptions = {
-    from: 'riotlolacc05@gmail.com',
-    to: 'radwan.1311.mr@gmail.com',
-    subject: 'islamy Email',
-    text: mail
-  };
+  var mail = JSON.stringify(req.body);
+    var mailOptions = {
+      from: 'riotlolacc05@gmail.com',
+      to: 'radwan.1311.mr@gmail.com',
+      subject: 'islamy Email',
+      text: mail
+    };
 
 
 
-  transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-res.redirect('/questions');
+    transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+  res.redirect('/questions');
 });
 
 
@@ -187,7 +159,7 @@ app.post('/prayer', function(req , res){
         magreb:magreb,
         eshaa:eshaa
       });
+      pressed = 0;
     });
-
   })
 });
